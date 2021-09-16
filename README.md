@@ -3,6 +3,7 @@
 ![This :fish: does not exist](https://github.com/S-B-Iqbal/This-Fish-Does-Not-Exist/blob/main/thisfishdoesnotexist/images/fish.gif)
 
 - Implementation of [DCGAN](https://arxiv.org/abs/1511.06434) on [Fish Dataset](https://www.kaggle.com/crowww/a-large-scale-fish-dataset) inspired from [This X does not exist](https://thisxdoesnotexist.com/)
+- The current implementation is unconditional i.e., it does not take into account the Species of Fish while generating new data.
 
 ## Data Architecture
 
