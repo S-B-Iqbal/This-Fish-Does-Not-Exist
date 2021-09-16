@@ -56,15 +56,16 @@ def plot_multiple_training_losses(losses_list, num_epochs,
     plt.tight_layout()
 
 def generate_img(model,N=1):
-    """Generate random image
+  """Generate random image
     Params:
     model : Trained Model
-    N : No.of Images to be generated"""
-    fixed_noise = torch.randn(N, 100, 1, 1, device=DEVICE) # format NCHW
-    with torch.no_grad():
-        fake_images = model.generator_forward(fixed_noise).detach().cpu()
-        plt.figure(figsize=(8,8))
-        plt.axis("off")
-        plt.title("Generated Images")
-        plt.imshow(np.transpose(torchvision.utils.make_grid(fake_images, padding=2, normalize=True),
+    N : No.of Images to be generated
+  """
+  fixed_noise = torch.randn(N, 100, 1, 1, device=DEVICE) # format NCHW
+  with torch.no_grad():
+    fake_images = model.generator_forward(fixed_noise).detach().cpu()
+    plt.figure(figsize=(8,8))
+    plt.axis("off")
+    plt.title("Generated Images")
+    plt.imshow(np.transpose(torchvision.utils.make_grid(fake_images, padding=2, normalize=True),
                                 (1, 2, 0)))
